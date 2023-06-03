@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href = "style.css" rel = "stylesheet">
+    <script src = "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js"></script>
+
+    <script src = "firebaselogin.js"></script>
+</head>
+<body>
+    <main>
+       <h1 class="logohead"><center>GYM MANAGEMENT SYSTEM</center></h1>
+       <section class = "ButtonContainer">
+        <button class="button-28" onClick="loginclicked('Admin')">ADMIN</button>
+        <button class="button-28" onClick="loginclicked('Member')">MEMBER</button>
+        <button class="button-28" onClick="loginclicked('User')">USER</button>
+       </section>
+       <dialog id = "loginDialog">
+        <button onclick="loginDialog.close()" style="position: relative;left:100%;right: 0;top: 0;border: none;background-color: transparent;font-size: 15px; cursor: pointer;" onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">X</button>
+        <h2 class="logohead">
+            <center><span id="whoopened"></span></center>
+        </h2>
+        <p class = "p"><span>Username : </span><input type = "username" id = "username"></p>
+        <p class = "p"><span>Password : </span><input type = "password" id = "password"></p>
+        <p class = "p" style="margin-top: 10%;"><button onclick="normallogin()" class = "button-28" style="min-width: 30%;">login</button></p>
+        <p id = "greeting"></p>
+        </dialog>
+    </main>
+</body>
+<script>
+function loginclicked(button) {
+    document.getElementById('whoopened').innerHTML = button + " Login";
+    document.getElementById('loginDialog').showModal();
+} 
+</script>
+</html>
