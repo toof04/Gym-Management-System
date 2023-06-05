@@ -11,19 +11,19 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 function normallogin() {
-  const email = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+  // const email = document.getElementById('username').value;
+  // const password = document.getElementById('password').value;
 
-  firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(result => {
-      const user = result.user;
-      const greetingElement = document.getElementById('greeting');
-      greetingElement.textContent = `Hello, ${user.email}`;
-      setTimeout(() => {
-        window.parent.parent.location.href = 'other.html';
-      }, 4500);
-    })
-    .catch((error) => {
-      alert(`Error signing in`);
-    });
+  // firebase.auth().signInWithEmailAndPassword(email, password)
+  //   .then(result => {
+  //     const user = result.user;
+  //     const greetingElement = document.getElementById('greeting');
+  //     greetingElement.textContent = `Hello, ${user.email}`;
+  //     setTimeout(() => {
+        window.parent.parent.location.href = 'admin.html';
+    //   }, 4500);
+    // })
+    // .catch((error) => {
+    //   alert(`Error signing in`);
+    // });
 }
