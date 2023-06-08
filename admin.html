@@ -16,28 +16,22 @@
             <center>GYM MANAGEMENT SYSTEM</center>
         </h1>
         <section class="divider">
-            <div class = "nav">
-                <article> Login</article>
-                <article> Add Member</article>
-                <article> Update/Delete Members</article>
-                <article> Create Bills</article>
-                <article> Assign Fee Package</article>
-                <article> Assign Notification for monthly</article>
-                <article> Report export</article>
-                <article> Supplement store</article>
-                <article> Diet Details</article>
+            <div class="nav">
+                <article onclick="showContent('addMember')"> Add Member</article>
+                <article onclick="showContent('updateDelete')"> Update/Delete Members</article>
+                <article onclick="showContent('createBills')"> Create Bills</article>
+                <article onclick="showContent('assignPackage')"> Assign Fee Package</article>
+                <article onclick="showContent('assignNotification')"> Assign Notification for Monthly</article>
+                <article onclick="showContent('reportExport')"> Report Export</article>
+                <article onclick="showContent('supplementStore')"> Supplement Store</article>
+                <article onclick="showContent('dietDetails')"> Diet Details</article>
             </div>
-            <div class="content">
-                
+            <div class="content" id="contentContainer">
+
             </div>
         </section>
     </main>
-</body>
-<script>
-    function loginclicked(button) {
-        document.getElementById('whoopened').innerHTML = button + " Login";
-        document.getElementById('loginDialog').showModal();
-    } 
-</script>
 
+</body>
+<script src = "adminnav.js"></script>
 </html>
